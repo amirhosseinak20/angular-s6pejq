@@ -1,0 +1,20 @@
+<nx-formfield nxLabel="Birthday">
+    <input nxDatefield nxInput [ngModel]="inputString" />
+    <span nxFormfieldHint>MM/DD/YYYY</span>
+</nx-formfield>
+
+<nx-formfield nxLabel="Insert ISO string">
+    <input nxInput [(ngModel)]="inputString" />
+</nx-formfield>
+
+
+<!-- Copyright ALLIANZ 2023 -->
+
+
+<form [formGroup]="loginForm">
+    <nx-formfield nxLabel="Birthday">
+        <input nxDatefield nxInput [formControl]="$any(loginForm.get('requestdate'))" />
+        <span nxFormfieldHint>MM/DD/YYYY</span>
+    </nx-formfield>
+  </form>
+  
